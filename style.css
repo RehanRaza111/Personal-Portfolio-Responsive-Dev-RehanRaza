@@ -451,6 +451,14 @@ form .btn-2 {
     margin-top: 1rem;
 }
 
+#msg{
+    color: rgb(37, 198, 37);
+    margin-top: -2rem;
+    display: block;
+    font-size: .7rem;
+}
+
+
 .copy-right {
     /* border: 1px solid pink; */
     width: 100%;
@@ -486,7 +494,7 @@ nav .fas {
     }
 
     nav{
-        top: 1.5rem;
+        top: 1rem;
         right: 1rem;
     }
 

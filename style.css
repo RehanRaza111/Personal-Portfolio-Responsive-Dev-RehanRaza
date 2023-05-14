@@ -7,14 +7,16 @@
     box-sizing: border-box;
 }
 
-.favorite-icon{
-width: 50px;
-height: 50px;
+.favorite-icon {
+    width: 50px;
+    height: 50px;
 }
-.favorite-icon img{
+
+.favorite-icon img {
     border-radius: 50%;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -63,7 +65,8 @@ nav {
     z-index: 10;
     display: flex;
 }
-.fa-bars{
+
+.fa-bars {
     background: #ff004f;
     padding: .5rem;
     cursor: pointer;
@@ -72,9 +75,8 @@ nav {
     transition: all .5s;
 }
 
-.fa-bars:hover{
+.fa-bars:hover {
     animation: rotate .5s infinite
-
 }
 
 .logo span {
@@ -116,6 +118,7 @@ nav ul li a:hover::after {
 
 
 .header-text {
+    width: 70%;
     margin-top: 20%;
     font-size: 1.5rem;
 }
@@ -126,6 +129,21 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
     color: #ff004f;
+}
+
+.header-img {
+    width: 30vw;
+    position: absolute;
+    right: 3.5rem;
+    top: 9rem;
+    animation: MoveBanner 3.5s infinite;
+
+
+}
+
+.header-img img {
+    width: 100%;
+    cursor: pointer;
 }
 
 
@@ -329,7 +347,7 @@ nav ul li a:hover::after {
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size:  1rem;
+    font-size: 1rem;
     transition: all .5s;
 }
 
@@ -358,7 +376,7 @@ nav ul li a:hover::after {
     transition: all .5s;
 }
 
-.layer a:hover{
+.layer a:hover {
     background: #ff004f;
     color: #fff;
     transform: translateX(5px);
@@ -461,7 +479,7 @@ form .btn-2 {
     margin-top: 1rem;
 }
 
-#msg{
+#msg {
     color: rgb(37, 198, 37);
     margin-top: -2rem;
     display: block;
@@ -497,21 +515,34 @@ nav .fas {
 /* ----------Media Quries for Small Screen--------  */
 
 @media screen and (max-width:600px) {
-    
+
     .header-text {
         margin-top: 50%;
         font-size: 1rem;
+        width: 100%;
+        text-align: center;
     }
 
-    nav{
+    .header-img {
+
+        margin-top: 70%;
+        position: absolute;
+        left: 2rem;
+        width: 80vw;
+
+    }
+
+
+    nav {
         top: 1rem;
         right: 1rem;
     }
 
-    .logo{
+    .logo {
         top: 1rem;
         left: 1rem;
     }
+
     nav .fas {
         display: block;
         font-size: 25px;
@@ -543,75 +574,96 @@ nav .fas {
         cursor: pointer;
     }
 
-    .sub-title{
+    .sub-title {
         font-size: 2rem;
     }
 
 
     .about-col-1,
-    .about-col-2{
-    flex-basis: 100%;
-    width: 100%;
-    /* border: 1px solid blanchedalmond; */
-    margin-left: .5rem;
+    .about-col-2 {
+        flex-basis: 100%;
+        width: 100%;
+        /* border: 1px solid blanchedalmond; */
+        margin-left: .5rem;
     }
-    .about-col-1{
+
+    .about-col-1 {
         margin-bottom: 2rem;
     }
 
-    .about-col-2{
+    .about-col-2 {
         font-size: 14px;
     }
 
-    .tab-links{
+    .tab-links {
         /* border: 1px solid green; */
         width: 100%;
         font-size: 1rem;
         margin-right: 1rem;
     }
 
-    .services-list{
+    .services-list {
         margin-left: 1rem;
     }
 
-    .work-list{
+    .work-list {
         margin-left: 1rem;
     }
 
     .contact-left,
-    .contact-right{
+    .contact-right {
         flex-basis: 100%;
-         margin-left: 1rem;
-    
+        margin-left: 1rem;
+
     }
 
-    .copy-right{
+    .copy-right {
         font-size: 14px;
-    
+
     }
 
 }
 
 
-@keyframes rotate{
-    0%{
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: rotate(90deg);
     }
-    75%{
+
+    75% {
         transform: rotate(180deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 
 }
 
 
+@keyframes MoveBanner{
+    0%{
+        transform: translateX(15px);
+    }
+    25%{
+        transform: translateY(-15px);
+    }
+    75%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(15px);
+    }
+}
 
-.heading-url{
+
+
+
+.heading-url {
     text-align: center;
     border-bottom: 2px solid #ff004f;
     width: 100%;
@@ -620,11 +672,11 @@ nav .fas {
 }
 
 
-form{
+form {
     position: relative;
 }
 
-form .fa-user{
+form .fa-user {
     position: absolute;
     right: 1rem;
     top: 2rem;
@@ -632,7 +684,8 @@ form .fa-user{
     font-size: 1.5rem;
 
 }
-form .fa-envelope{
+
+form .fa-envelope {
     position: absolute;
     right: 1rem;
     top: 7.5rem;
@@ -640,7 +693,8 @@ form .fa-envelope{
     font-size: 1.5rem;
 
 }
-form .fa-pen{
+
+form .fa-pen {
     position: absolute;
     right: 1rem;
     bottom: 18rem;
@@ -649,7 +703,6 @@ form .fa-pen{
 
 }
 
-#msg .tick-icon{
+#msg .tick-icon {
     display: none;
 }
-

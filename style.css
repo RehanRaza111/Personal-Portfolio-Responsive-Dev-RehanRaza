@@ -609,10 +609,8 @@ nav .fas {
 
 }
 
-.site-div{
-    height: 350px;
-    background: rgba(113, 115, 119, 0.5);
-}
+
+
 .heading-url{
     text-align: center;
     border-bottom: 2px solid #ff004f;
@@ -620,3 +618,38 @@ nav .fas {
     height: 50px;
     margin-top: 1rem;
 }
+
+
+form{
+    position: relative;
+}
+
+form .fa-user{
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    color: #ff004f;
+    font-size: 1.5rem;
+
+}
+form .fa-envelope{
+    position: absolute;
+    right: 1rem;
+    top: 7.5rem;
+    color: #ff004f;
+    font-size: 1.5rem;
+
+}
+form .fa-pen{
+    position: absolute;
+    right: 1rem;
+    bottom: 18rem;
+    color: #ff004f;
+    font-size: 1.5rem;
+
+}
+
+#msg .tick-icon{
+    display: none;
+}
+

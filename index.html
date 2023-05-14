@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/images/back2.jpg" class="favorite-icon">
+    <link rel="icon" href="/images/developer.png" class="favorite-icon">
     <title>Personal Portfolio|Dev RehanRaza</title>
 </head>
 
@@ -194,8 +194,8 @@
                     <div class="layer">
                         <h3>Cara E-Commerce Web</h3>
                         <p>Click Below Links for More Details.</p>
-                        <a href="" target="_blank"> Visit Site <i class="fas fa-link"></i></a>
-                        <a href="" target="_blank"> GitHub <i class="fab fa-github"></i></a>
+                        <a href="https://e-commerce-app-responsive.netlify.app" target="_blank"> Visit Site <i class="fas fa-link"></i></a>
+                        <a href="https://github.com/RehanRaza111/E-Commerce-App-Responsive" target="_blank"> GitHub <i class="fab fa-github"></i></a>
                     </div>
                 </div>
 
@@ -477,8 +477,6 @@
 
 
 
-
-
     <!------ Contact ------>
 
 
@@ -505,9 +503,9 @@
 
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name">
-                        <input type="email" name="Email" placeholder="Your Email">
-                        <textarea name="Message" id="" rows="6" cols="6" placeholder="Your Messsage"></textarea>
+                        <i class="fas fa-user"></i> <input type="text" name="Name" placeholder="Your Name" id="Name">
+                        <i class="fas fa-envelope"></i> <input type="email" name="Email" placeholder="Your Email" id="Email"> 
+                        <i class="fas fa-pen"></i> <textarea name="Message" id="" rows="6" cols="6" placeholder="Your Messsage"></textarea>
                         <button type="submit" class="btn btn-2"> Submit</button>
                     </form>
                     <span id="msg"></span>
@@ -550,7 +548,7 @@
 
         function openmenu() {
             sidemenu.style.right = "0";
-            console.log("rehan")
+            // console.log("rehan")
         }
 
         function closemenu() {
@@ -563,27 +561,58 @@
 
     <!-- on submitting form recieve Name, email and message on Google Sheet  -->
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby7kk2vbdjdwUepiri8y9a7qRs39pHb9LiqxhFe7CCpALVO2_u6jeG0zNxVp8Js_AsM/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const Message = document.getElementById("msg")
-        console.log(Message);
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby7kk2vbdjdwUepiri8y9a7qRs39pHb9LiqxhFe7CCpALVO2_u6jeG0zNxVp8Js_AsM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const Message = document.getElementById("msg")
+    const Input = document.getElementsByTagName('Input')
+    const Name= document.getElementById('Name')
+    const Email= document.getElementById('Email')
+    const check= document.getElementsByClassName('check')
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    Message.innerHTML = "Your message has been sent successfully you will get the response shortly from Dev RehanRaza",
-                        setTimeout(() => {
-                            Message.innerHTML = ""
-                        }, 6000);
-                    form.reset()
-                }
-                )
-                .catch(error => console.error('Error!', error.message))
-        })
 
-    </script>
+
+
+    form.addEventListener('submit', e => {
+
+        if(Name.value==""||Email.value==""||Message.value==""){
+            window.alert("Please fill all fields before submit.")
+        }
+
+
+        else{
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                Message.innerHTML = "Your message has been sent successfully you will get the response shortly from Dev RehanRaza"
+
+                    setTimeout(() => {
+                        Message.innerHTML = ""
+                    },6000);
+                form.reset()
+            }
+            )
+
+            .catch(error => console.error('Error!', error.message))
+    }
+}
+    )
+
+</script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
